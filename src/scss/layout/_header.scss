@@ -1,8 +1,7 @@
 .header {
   background-color: $verde;
-
   .contenido-header {
-    padding: 2.5rem 0;
+    padding: 3rem 0;
 
     @include tablet {
       display: flex;
@@ -13,27 +12,29 @@
 
   h1 {
     color: $blanco;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     text-align: center;
     @include tablet {
       margin-bottom: 0;
     }
   }
 
-  .navegacion-principal {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
+  &.fijo {
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 0.3rem 0.4rem #444;
+  }
+}
 
-    a {
-      text-transform: uppercase;
-      color: $blanco;
-      font-size: 2rem;
-      font-weight: bold;
-      transition: all 0.5s;
-      &:hover {
-        color: $amarillo;
-      }
+.navegacion-principal {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  a {
+    color: $blanco;
+    font-size: 2rem;
+    &:hover {
+      color: $amarillo;
     }
   }
 }
