@@ -9,9 +9,16 @@ html {
   box-sizing: inherit;
 }
 
+* {
+  behavior: smooth;
+}
+
 body {
   font-family: $fuentePrincipal;
   font-size: 1.6rem;
+  &.fijarbody {
+    overflow: hidden;
+  }
 }
 
 p {
@@ -49,4 +56,8 @@ h2 {
 
 h3 {
   font-size: 3rem;
+}
+
+ul {
+  list-style: none;
 }

@@ -349,9 +349,16 @@ html {
   box-sizing: inherit;
 }
 
+* {
+  behavior: smooth;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
+}
+body.fijarbody {
+  overflow: hidden;
 }
 
 p {
@@ -389,6 +396,18 @@ h2 {
 
 h3 {
   font-size: 3rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.bg-verde {
+  background-color: #31913d;
+}
+
+.bg-amarillo {
+  background-color: #fef46d;
 }
 
 .header {
@@ -509,4 +528,126 @@ h3 {
 }
 .contenido-festival .texto {
   line-height: 1.5;
+}
+
+.lineup {
+  background-color: #f53756;
+  padding: 5rem 5rem;
+}
+.lineup h3 {
+  text-align: center;
+  color: #fff;
+}
+.lineup p {
+  text-align: center;
+  color: #fff;
+}
+.lineup .dia {
+  text-transform: uppercase;
+  margin: 5rem 0;
+}
+
+@media (min-width: 768px) {
+  .escenarios-contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+.escenarios-contenedor .escenario {
+  padding-top: 2.5rem;
+}
+.escenarios-contenedor .nombre-escenario {
+  color: #000;
+  font-size: 2rem;
+  font-weight: 300;
+}
+.escenarios-contenedor .nombre-escenario::after {
+  content: "";
+  width: 20rem;
+  height: 20rem;
+  display: block;
+  margin: 2rem auto 0 auto;
+  background-size: 15rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.edm .nombre-escenario::after {
+  background-image: url(../img/icono_edm.png);
+}
+
+.rock .nombre-escenario::after {
+  background-image: url(../img/icono_rock.png);
+}
+
+.calendario {
+  padding: 0;
+}
+.calendario li {
+  padding: 2.5rem;
+  font-weight: 700;
+}
+.calendario span {
+  font-weight: 400;
+}
+
+.bg-verde .calendario li:nth-child(odd) {
+  background-color: #246b2d;
+}
+
+.bg-amarillo .calendario li:nth-child(odd) {
+  background-color: #fef03a;
+}
+
+.galeria {
+  padding: 5rem 0;
+}
+.galeria h3 {
+  text-align: center;
+}
+
+.galeria-imagenes {
+  padding: 0;
+  list-style: none;
+  margin-top: 5rem;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+}
+@media (min-width: 768px) {
+  .galeria-imagenes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .galeria-imagenes {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.btn-cerrar {
+  width: 5rem;
+  height: 5rem;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
 }
